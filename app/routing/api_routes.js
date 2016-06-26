@@ -1,6 +1,28 @@
 //2 routes
 
 //GET route of /api/friends to display JSON of poss friends
+app.get('/api/:characters?', function(req, res){
+
+	var chosen = req.params.friends;
+
+	if(chosen){
+		console.log(chosen);
+
+		for (var i=0; i <friends.length; i++){
+
+			if (chosen == friends[i].routeName){
+				res.json(friendss[i]);
+				return;
+			}
+		}
+
+		res.json(false);
+	}
+
+	else{
+		res.json(friends);
+	}
+})
 
 
 //POST route to /api/friends to handle survey res and compatibility logic

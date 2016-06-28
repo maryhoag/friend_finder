@@ -33,3 +33,6 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
  // app.use(function(req, res) {
  //       res.sendFile(path.join(__dirname, "..", "public", "home.html"));
  //   }); // end of home.html route
+
+
+ 

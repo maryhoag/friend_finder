@@ -4,6 +4,7 @@
 
 //default USE route to home.html
 // Basic route that sends the user first to the AJAX Page
+//change to USE and must be last!!
 app.get('/', function(req, res){
 	
 	//res.send("Welcome to the Star Wars Page!")

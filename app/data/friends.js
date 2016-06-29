@@ -1,0 +1,105 @@
+var friends = [
+	
+		{
+	  "name":"Ahmed",
+	  "photo":"http://lorempixel.com/400/200/people/",
+	  "scores":[
+	     5,
+	     1,
+	     4,
+	     4,
+	     5,
+	     1,
+	     2,
+	     5,
+	     4,
+	     1
+	   ]
+	},
+
+	{
+	  "name":"John",
+	  "photo":"http://lorempixel.com/400/200/people/",
+	  "scores":[
+	     3,
+	     1,
+	     3,
+	     1,
+	     2,
+	     3,
+	     3,
+	     1,
+	     1,
+	     1
+	   ]
+	},
+
+	{
+	  "name":"Zoe",
+	  "photo":"http://lorempixel.com/400/200/people/",
+	  "scores":[
+	     3,
+	     2,
+	     2,
+	     2,
+	     2,
+	     2,
+	     2,
+	     1,
+	     5,
+	     1
+	   ]
+	},
+
+	{
+	  "name":"Maria",
+	  "photo":"http://lorempixel.com/400/200/people/",
+	  "scores":[
+	     2,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     3,
+	     1
+	   ]
+	},
+
+	{
+	  "name":"Lisa",
+	  "photo":"http://lorempixel.com/400/200/people",
+	  "scores":[
+	     4,
+	     2,
+	     1,
+	     5,
+	     4,
+	     4,
+	     2,
+	     1,
+	     5,
+	     2
+	   ]
+	},
+
+	{
+	  "name":"Tyrone",
+	  "photo":"http://lorempixel.com/400/200/people/",
+	  "scores":[
+	     2,
+	     3,
+	     5,
+	     4,
+	     2,
+	     2,
+	     2,
+	     3,
+	     1,
+	     2
+	   ]
+	}
+
+];

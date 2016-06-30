@@ -199,6 +199,9 @@
     © 2014 Copyright Text
     <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
     </div>
+
+    <a class="waves-effect waves-light btn" id="finder">submit</a>
+    
   </div>
   </div>
 </footer>
@@ -212,7 +215,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- materialize js link -->
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-  <script type="text/javascript" src="../../server.js"></script>
+  <script type="text/javascript">
+    $('finder').on('click', function{
+      var finder = {
+        name: $('#first_name').val().trim(),
+        photo: $('#photo').val().trim(),
+        scores: [$('#q1').val().trim(), $('#q2').val().trim(), $('#q3').val().trim(), $('#q4').val().trim(), $('#q5').val().trim(), $('#q6').val().trim(), $('#q7').val().trim(), $('#q8').val().trim(), $('#q9').val().trim(), $('#q10').val().trim()]
+      };
+
+    });
+
+
+  </script>
 
 </body>
 </html>

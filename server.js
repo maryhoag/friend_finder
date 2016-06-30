@@ -19,12 +19,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
+//sets up external routes
+app.use(express.static(path.join(__dirname, 'app', 'public')));
+
 app.listen(PORT, function() {
 	console.log('server listening on %d', PORT);
 });
-
-
-
 
 
 // app.get('/survey', function(request, response) {
@@ -34,17 +34,6 @@ app.listen(PORT, function() {
 
 
  //app.use(express.static('public'));
-
- var friend_modal = 
-  '<!-- Modal Structure -->'
-  '<div id="modal1" class="modal">' +
-    '<div class="modal-content">' +
-      '<h4>Friend</h4>' +
-      '<p>' + new_friend + '</p>' +
-    '</div><div class="modal-footer">' +
-      '<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>' +
-    '</div></div>'
-
 
 
  // app.use(function(req, res) {

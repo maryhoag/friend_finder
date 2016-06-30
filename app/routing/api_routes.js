@@ -1,33 +1,50 @@
 //2 routes
+var friends = require('../data/friends.js');
+var path = require('path');
+var body_parser = require('body-parser');
 
-//GET route of /api/friends to display JSON of poss friends
-app.get('/api/:friends?', function(req, res){
+module.exports = function(app){
 
-	var chosen = req.params.friends;
+	app.use(bodyParser.json());
+	app.use(bodyParser.urlencoded({extended: true}));
+	app.use(bodyParser.text());
+	app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-	if(chosen){
-		console.log(chosen);
+	//GET route of /api/friends to display JSON of poss friends
+	app.get('/api/friends', function(req, res){
 
-		for (var i=0; i <friends.length; i++){
+		// var chosen = req.params.friends;
 
-			if (chosen == friends[i].routeName){
-				res.json(friendss[i]);
-				return;
-			}
+		// if(chosen){
+		// 	console.log(chosen);
+
+		// 	for (var i=0; i <friends.length; i++){
+
+		// 		if (chosen == friends[i].routeName){
+		// 			res.json(friendss[i]);
+		// 			return;
+		// 		}
+		// 	}
+
+		// 	res.json(false);
+		// }
+
+		// else{
+			res.json(friends); //KEY LINE that makes the info available to other functions
 		}
-
-		res.json(false);
-	}
-
-	else{
-		res.json(friends);
-	}
-})
+	})
 
 
-//POST route to /api/friends to handle survey res and compatibility logic
-//data is an array of objects: name, photo, and scores array
+	//POST route to /api/friends to handle survey res and compatibility logic
+	//data is an array of objects: name, photo, and scores array
+	app.post('/api/friends', function(req, res) {
+		
+		finders.push(req.body);
+		//makes available the info submited
+		res.json();
+	});
 
+}
 //survey answers comapred index by index
 
 //the absolute value of each individual difference is added to totalDifference

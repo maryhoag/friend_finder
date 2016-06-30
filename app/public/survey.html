@@ -204,6 +204,22 @@
     
   </div>
   </div>
+
+
+  
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal" id='modal1'>
+    <div class="modal-content">
+      <h4>New Best Friend!</h4>
+      <!-- add the best friend information here -->
+      <p id='new_best_friend'></p>
+      <img id='best_friend_photo'>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Yay friends!</a>
+    </div>
+  </div>
 </footer>
             
 
@@ -216,14 +232,35 @@
 	<!-- materialize js link -->
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script type="text/javascript">
+    //graab the user input
     $('finder').on('click', function{
-      var finder = {
+      var finder_info = {
         name: $('#first_name').val().trim(),
         photo: $('#photo').val().trim(),
+        //create array of scores is that trim necessary?
         scores: [$('#q1').val().trim(), $('#q2').val().trim(), $('#q3').val().trim(), $('#q4').val().trim(), $('#q5').val().trim(), $('#q6').val().trim(), $('#q7').val().trim(), $('#q8').val().trim(), $('#q9').val().trim(), $('#q10').val().trim()]
       };
 
     });
+
+    var currentURL = window.location.origin;
+
+    $.post(currentURL + '/api/friends', finder_info, function(results) {
+      $("#new_best_friend").text(results.name);
+      $("#best_friend_photo").attr('src', results.photo);
+      //open modal
+
+    $('#modal1').openModal();
+    })
+    //assign the array to a var for clarity
+    var user_scores = finder_info[2];
+
+    
+    //loop over the array of possible friends
+    for(var i = 0; i < user_scores.length; i++) {
+
+
+    }
 
 
   </script>

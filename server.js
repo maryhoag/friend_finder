@@ -5,7 +5,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
-var friends = require('./app.data.friends.js');
+//var friends = require('/app.data.friends.js');
 var new_friend = {};
 
 // Sets up the Express App

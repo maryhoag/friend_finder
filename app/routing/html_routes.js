@@ -28,12 +28,9 @@ app.get('/survey', function(req, res){
 
 //default USE route to home.html
 // Basic route that sends the user first to the AJAX Page
-<<<<<<< HEAD
 //change to USE and must be last!!
-app.get('/', function(req, res){
-=======
+
 // app.get('/', function(req, res){
->>>>>>> aafdb5605ebe33d9adab9b02bbcb68e88f7ad877
 	
 // 	//res.send("Welcome to the Star Wars Page!")
 // 	res.sendFile(path.join(__dirname + '/home.html'));
@@ -42,7 +39,7 @@ app.get('/', function(req, res){
 
 // app.use('/', function(req, res) {
 // 	GET 'home.html'
-// 	console.log(req.orignoalUrl);
+// 	console.log(req.orignlUrl);
 // 	console.log(req.baseUrl);
 // 	console.log(req.path);
 // 	next();

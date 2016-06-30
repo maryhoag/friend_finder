@@ -1,0 +1,20 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "an app to find your new best friend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryhoag/friend_finder.git"
+  },
+  "author": "maryhoag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryhoag/friend_finder/issues"
+  },
+  "homepage": "https://github.com/maryhoag/friend_finder#readme"
+}

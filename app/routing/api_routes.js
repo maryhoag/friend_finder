@@ -1,7 +1,7 @@
 //2 routes
 
 //GET route of /api/friends to display JSON of poss friends
-app.get('/api/:characters?', function(req, res){
+app.get('/api/:friends?', function(req, res){
 
 	var chosen = req.params.friends;
 
